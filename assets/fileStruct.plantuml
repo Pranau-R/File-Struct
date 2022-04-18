@@ -1,0 +1,40 @@
+/'
+Module:	fileStruct.plantuml
+Function:
+        PlantUML source for fileStruct.
+
+Copyright:
+        This file copyright (C) 2022 by
+        MCCI Corporation
+        3520 Krums Corners Road
+        Ithaca, NY 14850
+        An unpublished work. All rights reserved.
+        This file is proprietary information, and may not be disclosed or
+        copied without the prior permission of MCCI Corporation.
+
+Author:
+        Pranau R, MCCI Corporation    April 2022
+'/
+
+@startuml
+
+start
+
+:Create a Menu with Write and Read functions;
+:Declare a variable for choice;
+:Read Choice;
+if (is choice -> Write) then (yes)
+:Open a text file;
+:Write all the data in it;
+:Close the file;
+else if (is choice -> Read) then (yes)
+:Open the existing text file;
+:Read all the data from it;
+:Close the file;
+else (no)
+:Display invalid choice;
+endif
+
+stop
+
+@enduml
